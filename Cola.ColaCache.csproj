@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <PackageId>Cola.ColaCache</PackageId>
+        <Authors>OdinSam</Authors>
+        <Description>Cola.CaCache 缓存组件</Description>
+        <Copyright>copyRight © 2023 OdinSam</Copyright>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionSuffix>beta-100</VersionSuffix>
+        <PackageIcon>./icon.png</PackageIcon>
+        <PackageReadmeFile>./readme.md</PackageReadmeFile>
+        <PackageTags>Cola.CaCache;cola;cache</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Cola.Core\Cola.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+        <PackageReference Include="StackExchange.Redis" Version="2.6.104" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="icon.png"  Pack="true" PackagePath="\" />
+      <EmbeddedResource Include="icon.png">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="readme.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+</Project>
