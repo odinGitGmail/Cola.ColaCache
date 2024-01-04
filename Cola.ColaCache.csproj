@@ -13,6 +13,8 @@
         <PackageIcon>./icon.png</PackageIcon>
         <PackageReadmeFile>./readme.md</PackageReadmeFile>
         <PackageTags>Cola.CaCache;cola;cache</PackageTags>
+        <Version>1.0.2</Version>
+        <AssemblyVersion>1.0.2</AssemblyVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -35,5 +37,8 @@
     <ItemGroup>
         <None Include="readme.md" Pack="true" PackagePath="\"/>
     </ItemGroup>
+    <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+      <Exec Command="dotnet restore" />
+    </Target>
 
 </Project>
