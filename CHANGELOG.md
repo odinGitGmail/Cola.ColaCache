@@ -1,13 +1,13 @@
-# Changelog
+## <small>1.0.3 (2024-01-04)</small>
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+* chore(release): 1.0.3 ([2bdd36e](https://github.com/odinGitGmail/AutoCreateChangelog/commit/2bdd36e))
+* fix: change namespace ([6595910](https://github.com/odinGitGmail/AutoCreateChangelog/commit/6595910))
+* init changelog ([eba9fa3](https://github.com/odinGitGmail/AutoCreateChangelog/commit/eba9fa3))
+* no message ([936036d](https://github.com/odinGitGmail/AutoCreateChangelog/commit/936036d))
+* no message ([f90bb46](https://github.com/odinGitGmail/AutoCreateChangelog/commit/f90bb46))
+* no message ([e47ff1f](https://github.com/odinGitGmail/AutoCreateChangelog/commit/e47ff1f))
 
-### [1.0.3](https://github.com/odinGitGmail/AutoCreateChangelog/compare/v1.0.2...v1.0.3) (2024-01-04)
 
-
-### Bug Fixes
-
-* change namespace ([6595910](https://github.com/odinGitGmail/AutoCreateChangelog/commit/6595910e8acfa86d4b126c6039ed786a9dd4d436))
 
 ## <small>1.0.2 (2024-01-04)</small>
 
@@ -17,3 +17,6 @@ All notable changes to this project will be documented in this file. See [standa
 * init ColaCache ([3002ac2](https://github.com/odinGitGmail/AutoCreateChangelog/commit/3002ac2))
 * no message ([54917bf](https://github.com/odinGitGmail/AutoCreateChangelog/commit/54917bf))
 * remove ignore file ([3110d43](https://github.com/odinGitGmail/AutoCreateChangelog/commit/3110d43))
+
+
+

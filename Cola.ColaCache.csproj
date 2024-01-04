@@ -11,9 +11,9 @@
         <PackageIcon>./icon.png</PackageIcon>
         <PackageReadmeFile>./readme.md</PackageReadmeFile>
         <PackageTags>Cola.CaCache;cola;cache</PackageTags>
-        <Version>1.0.2</Version>
-        <AssemblyVersion>1.0.2</AssemblyVersion>
-        <FileVersion>1.0.2</FileVersion>
+        <Version>1.0.3</Version>
+        <AssemblyVersion>1.0.3</AssemblyVersion>
+        <FileVersion>1.0.3</FileVersion>
         <Title>Cola.ColaCache</Title>
         <PackageProjectUrl>https://github.com/odinGitGmail/Cola.ColaCache</PackageProjectUrl>
         <RepositoryUrl>https://github.com/odinGitGmail/Cola.ColaCache</RepositoryUrl>
