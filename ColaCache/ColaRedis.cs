@@ -1,6 +1,6 @@
 ﻿using Cola.ColaCache.IColaCache;
 using Cola.Core.Models.ColaCache;
-using Cola.Core.Utils.Extensions;
+using Cola.CoreUtils.Extensions;
 using Newtonsoft.Json;
 using StackExchange.Redis;
 

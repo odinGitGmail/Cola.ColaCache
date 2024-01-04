@@ -3,7 +3,7 @@ using Cola.ColaCache.IColaCache;
 using Cola.Core.ColaConsole;
 using Cola.Core.Models.ColaCache;
 using Cola.Core.Utils.Constants;
-using Cola.Core.Utils.Extensions;
+using Cola.CoreUtils.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

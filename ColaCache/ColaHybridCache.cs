@@ -1,6 +1,6 @@
 ﻿using Cola.ColaCache.IColaCache;
 using Cola.Core.ColaException;
-using Cola.Core.Utils.Helper;
+using Cola.CoreUtils.Helper;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
 using StackExchange.Redis;
