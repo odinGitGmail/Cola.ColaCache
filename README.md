@@ -1,4 +1,7 @@
 ﻿### [ColaCache](https://github.com/odinsam/OdinCola/tree/master/Cola.Solution/Cola.CaCache) 
+
+[![Version](https://flat.badgen.net/nuget/v/Cola.ColaCache?label=version)](https://github.com/odinGitGmail/Cola.ColaCache) [![download](https://flat.badgen.net/nuget/dt/Cola.ColaCache)](https://www.nuget.org/packages/Cola.ColaCache) [![commit](https://flat.badgen.net/github/last-commit/odinGitGmail/Cola.ColaCache)](https://flat.badgen.net/github/last-commit/odinGitGmail/Cola.ColaCache) [![Blog](https://flat.badgen.net/static/blog/odinsam.com)](https://odinsam.com)
+
 #### 配置文件样例
 ```json
 {
