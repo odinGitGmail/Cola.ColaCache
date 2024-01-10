@@ -11,17 +11,17 @@ namespace Cola.ColaCache;
 
 public static class ColaRedisInject
 {
-    public static IServiceCollection AddSingletonColaCache(
+    public static IServiceCollection AddColaCache(
         this IServiceCollection services,
         IConfiguration config)
     {
         var cacheConfig = config.GetSection(SystemConstant.CONSTANT_COLACACHE_SECTION).Get<CacheConfigOption>();
-        cacheConfig = cacheConfig ?? new CacheConfigOption();
+        cacheConfig ??= new CacheConfigOption();
         return InjectCache(services, cacheConfig);
     }
     
     
-    public static IServiceCollection AddSingletonColaCache(
+    public static IServiceCollection AddColaCache(
         this IServiceCollection services,
         Action<CacheConfigOption> action)
     {
