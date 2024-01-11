@@ -39,22 +39,22 @@ public static class ColaRedisInject
         if (cacheConfig.CacheType == CacheType.Hybrid.ToInt())
         {
             services.AddSingleton<IColaRedisCache>(provider => new ColaRedis(cacheConfig));
-            ConsoleHelper.WriteInfo("注入类型【 ColaRedis, IColaRedisCache 】");
+            ConsoleHelper.WriteInfo("ColaCache 注入类型【 IColaRedisCache 】");
             services.AddSingleton<IColaMemoryCache>(provider => new ColaMemoryCache(cacheConfig));
-            ConsoleHelper.WriteInfo("注入类型【 ColaMemoryCache, IColaMemoryCache 】");
+            ConsoleHelper.WriteInfo("ColaCache 注入类型【 IColaMemoryCache 】");
             services.AddSingleton<IColaHybridCache,ColaHybridCache>();
             services.AddSingleton<IColaHybridCache>(servicesProvider=>ColaHybridCache.Create(servicesProvider));
-            ConsoleHelper.WriteInfo("注入类型【 ColaHybridCache, IColaHybridCache 】");
+            ConsoleHelper.WriteInfo("ColaCache 注入类型【 IColaHybridCache 】");
         }
         else if (cacheConfig.CacheType == CacheType.Redis.ToInt())
         {
             services.AddSingleton<IColaRedisCache>(provider => new ColaRedis(cacheConfig));
-            ConsoleHelper.WriteInfo("注入类型【 ColaRedis, IColaRedisCache 】");
+            ConsoleHelper.WriteInfo("ColaCache 注入类型【 IColaRedisCache 】");
         }
         else if (cacheConfig.CacheType == CacheType.InMemory.ToInt())
         {
             services.AddSingleton<IColaMemoryCache>(provider => new ColaMemoryCache(cacheConfig));
-            ConsoleHelper.WriteInfo("注入类型【 ColaMemoryCache, IColaMemoryCache 】");
+            ConsoleHelper.WriteInfo("ColaCache 注入类型【 IColaMemoryCache 】");
         }
         return services;
     }
