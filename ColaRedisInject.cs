@@ -15,7 +15,7 @@ public static class ColaRedisInject
         this IServiceCollection services,
         IConfiguration config)
     {
-        var cacheConfig = config.GetSection(SystemConstant.CONSTANT_COLACACHE_SECTION).Get<CacheConfigOption>();
+        var cacheConfig = config.GetColaSection<CacheConfigOption>(SystemConstant.CONSTANT_COLACACHE_SECTION);
         cacheConfig ??= new CacheConfigOption();
         return InjectCache(services, cacheConfig);
     }
