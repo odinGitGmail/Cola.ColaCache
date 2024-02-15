@@ -1,5 +1,6 @@
 ﻿using Cola.ColaCache.IColaCache;
 using Cola.Core.ColaException;
+using Cola.CoreUtils.Enums;
 using Cola.CoreUtils.Helper;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.DependencyInjection;
@@ -70,7 +71,7 @@ public class ColaHybridCache : IColaHybridCache
         if (redisResult == null)
         {
             if(!memoryExists)
-                throw _exceptionHelper.ThrowException("key does not exist");
+                throw _exceptionHelper.ThrowException(EnumException.KeyNotExists);
             ColaRedisCache.Set(key, memoryResult, expiry, database);
         }
         else
