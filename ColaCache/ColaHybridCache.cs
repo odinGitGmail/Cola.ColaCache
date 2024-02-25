@@ -61,11 +61,11 @@ public class ColaHybridCache : IColaHybridCache
     public void Refresh(string key, TimeSpan? expiry = null, int database = 0)
     {
         var memoryResult = ColaMemoryCache.Get<dynamic>(key);
-        bool memoryExists = true;
+        var memoryExists = true;
         if (memoryResult == null)
             memoryExists = false;
         else
-            ColaMemoryCache.Set(key,memoryResult,expiry.Value);
+            ColaMemoryCache.Set(key,memoryResult,expiry!.Value);
         
         var redisResult = ColaRedisCache.Get<dynamic>(key, database);
         if (redisResult == null)
@@ -77,7 +77,7 @@ public class ColaHybridCache : IColaHybridCache
         else
         {
             if (!memoryExists)
-                ColaMemoryCache.Set(key,redisResult,expiry.Value);
+                ColaMemoryCache.Set(key,redisResult,expiry!.Value);
             ColaRedisCache.Refresh(key,expiry,database);
         }
     }
@@ -94,12 +94,14 @@ public class ColaHybridCache : IColaHybridCache
         return ColaRedisCache.RedisLock(key, expiry, database);
     }
 
-    public ReaderWriterLockSlim MemoryLock()
+    public ReaderWriterLockSlim? MemoryLock()
     {
         return ColaMemoryCache.MemoryLock();
     }
 
-    public void RedisLockMethodAsync(string key, TimeSpan expiry, Action<ConnectionMultiplexer, ConnectionMultiplexer, ConnectionMultiplexer> success, Action<ConnectionMultiplexer, ConnectionMultiplexer, ConnectionMultiplexer, Exception> fail, int database = 0)
+    public void RedisLockMethodAsync(string key, TimeSpan expiry,
+        Action<ConnectionMultiplexer, ConnectionMultiplexer, ConnectionMultiplexer> success,
+        Action<ConnectionMultiplexer, ConnectionMultiplexer, ConnectionMultiplexer, Exception> fail, int database = 0)
     {
         ColaRedisCache.RedisLockMethodAsync(key, expiry, success, fail, database);
     }

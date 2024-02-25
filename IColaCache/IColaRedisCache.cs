@@ -5,10 +5,10 @@ namespace Cola.ColaCache.IColaCache;
 
 public interface IColaRedisCache : IColaCacheBase
 {
-    ConnectionMultiplexer EventBusRedis { get; set; }
-    ConnectionMultiplexer MastersWriteRedis { get; set; }
-    ConnectionMultiplexer SlavesReadRedis { get; set; }
-    ISubscriber Subscriber{ get; set; }
+    ConnectionMultiplexer? EventBusRedis { get; set; }
+    ConnectionMultiplexer? MastersWriteRedis { get; set; }
+    ConnectionMultiplexer? SlavesReadRedis { get; set; }
+    ISubscriber? Subscriber{ get; set; }
 
     /// <summary>
     /// GetExpireTime

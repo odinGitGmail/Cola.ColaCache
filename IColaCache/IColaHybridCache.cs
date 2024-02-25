@@ -37,7 +37,7 @@ public interface IColaHybridCache : IColaCacheBase
     /// <summary>
     ///     get MemoryLock object
     /// </summary>
-    ReaderWriterLockSlim MemoryLock();
+    ReaderWriterLockSlim? MemoryLock();
     
 
     /// <summary>
