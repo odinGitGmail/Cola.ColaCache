@@ -1,5 +1,5 @@
 ﻿using Cola.ColaCache.IColaCache;
-using Cola.Core.ColaException;
+using Cola.Core.ColaEx;
 using Cola.CoreUtils.Enums;
 using Cola.CoreUtils.Helper;
 using Microsoft.Extensions.Caching.Memory;
